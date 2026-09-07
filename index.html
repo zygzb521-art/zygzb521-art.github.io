@@ -3,371 +3,398 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>周银钢 · AI 应用工程师 | AI Agent Engineer</title>
-<meta name="description" content="周银钢 - AI 应用工程师 / AI Agent Engineer。独立交付可运行的 AI 应用系统。深圳。">
+<title>周银钢 · AI 应用工程师</title>
+<meta name="description" content="周银钢 - AI 应用工程师。独立交付可运行的 AI 应用系统。">
 <meta name="author" content="周银钢">
 <meta property="og:title" content="周银钢 · AI 应用工程师">
 <meta property="og:description" content="独立交付可运行的 AI 应用系统。">
 <meta property="og:type" content="profile">
-<meta name="theme-color" content="#b8292a">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+<meta name="theme-color" content="#0f1115">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>">
 <style>
 :root{
-  --fg:#111;
-  --sub:#333;
-  --dim:#666;
-  --line:#cfd6dd;
-  --line-soft:#e6eaee;
-  --bg:#fff;
+  --bg:#fafaf9;
+  --fg:#0f1115;
+  --sub:#3a3f47;
+  --dim:#6b7280;
+  --line:#e5e5e5;
+  --line-soft:#f0f0ee;
   --acc:#b8292a;
-  --rule:#caa15a;
+  --acc-soft:#fef2f2;
+  --code:#1f2937;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+  --mono:"SF Mono","Cascadia Code","JetBrains Mono",Menlo,Consolas,monospace;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f1115;
+    --fg:#f5f5f4;
+    --sub:#d6d3d1;
+    --dim:#a8a29e;
+    --line:#292524;
+    --line-soft:#1c1917;
+    --acc:#f87171;
+    --acc-soft:#1f1212;
+    --code:#e7e5e4;
+  }
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{
   background:var(--bg);
   color:var(--fg);
   font-family:var(--sans);
-  font-size:11pt;
-  line-height:1.55;
-  padding:42px 28px 60px;
+  font-size:15px;
+  line-height:1.7;
   -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
-.wrap{max-width:780px;margin:0 auto}
+.wrap{max-width:880px;margin:0 auto;padding:0 28px}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--acc);color:#fff}
 
-/* ---------- header ---------- */
-.header{margin-bottom:0}
-.name{
-  font-size:30pt;
-  font-weight:700;
-  letter-spacing:.01em;
-  line-height:1.1;
-  margin-bottom:6px;
-}
-.tagline{
-  font-size:11pt;
-  color:var(--sub);
-  margin-bottom:18px;
-  letter-spacing:.02em;
-}
-.contact{
+/* ---------- nav ---------- */
+.nav{
   display:flex;
-  flex-wrap:wrap;
-  gap:0 14px;
-  font-size:9.5pt;
-  color:var(--sub);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  padding:8px 0;
-  margin-bottom:24px;
+  align-items:center;
+  justify-content:space-between;
+  padding:24px 0;
+  border-bottom:1px solid var(--line-soft);
+  margin-bottom:64px;
 }
-.contact a{color:var(--sub);text-decoration:none}
-.contact a:hover{color:var(--acc)}
-.contact .sep{color:var(--line)}
+.brand{font-weight:700;font-size:15px;letter-spacing:.02em}
+.brand b{color:var(--acc)}
+.nav-links{display:flex;gap:22px;font-size:13px;color:var(--dim)}
+.nav-links a:hover{color:var(--fg)}
 
-/* ---------- summary ---------- */
-.summary{margin:0 0 26px}
-.summary p{color:var(--sub);font-size:10.5pt}
-.summary p + p{margin-top:5px}
+/* ---------- hero ---------- */
+.hero{padding:24px 0 72px;border-bottom:1px solid var(--line-soft);margin-bottom:64px}
+.hero-name{
+  font-size:54px;
+  font-weight:800;
+  letter-spacing:-.03em;
+  line-height:1.05;
+  margin-bottom:14px;
+}
+.hero-name .accent{color:var(--acc)}
+.hero-tag{
+  font-size:19px;
+  color:var(--sub);
+  margin-bottom:22px;
+  font-weight:500;
+  letter-spacing:.01em;
+}
+.hero-desc{
+  font-size:16px;
+  color:var(--dim);
+  max-width:640px;
+  line-height:1.8;
+}
+.hero-cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 18px;
+  border:1px solid var(--line);
+  border-radius:6px;
+  font-size:14px;
+  font-weight:500;
+  color:var(--fg);
+  background:var(--bg);
+  transition:.15s;
+}
+.btn:hover{border-color:var(--fg);background:var(--line-soft)}
+.btn.primary{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn.primary:hover{background:var(--acc);border-color:var(--acc)}
+.btn .ico{font-size:12px;opacity:.7}
 
 /* ---------- section ---------- */
-.sec{margin-top:24px}
+.sec{margin-bottom:72px}
 .sec-h{
-  font-size:11pt;
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  margin-bottom:28px;
+}
+.sec-title{
+  font-size:13px;
   font-weight:700;
   letter-spacing:.18em;
   text-transform:uppercase;
   color:var(--fg);
-  border-bottom:1.5px solid var(--acc);
-  padding-bottom:3px;
-  margin-bottom:12px;
 }
+.sec-meta{font-size:12px;color:var(--dim);font-family:var(--mono)}
 
-/* ---------- skill matrix ---------- */
-.skills{display:grid;grid-template-columns:1fr 1fr;gap:6px 28px}
-.skill{
-  display:flex;
-  align-items:baseline;
-  justify-content:space-between;
-  gap:10px;
-  padding:2px 0;
-  border-bottom:1px dotted var(--line-soft);
-}
-.skill-name{font-weight:600;color:var(--fg);font-size:10.5pt}
-.skill-detail{color:var(--dim);font-size:9.5pt}
-.skills-foot{grid-column:1/-1;margin-top:6px;color:var(--dim);font-size:9pt}
-
-/* ---------- project card ---------- */
-.proj{margin-bottom:12px}
-.proj-h{
-  display:flex;
-  align-items:baseline;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-bottom:2px;
-}
-.proj-title{font-weight:700;font-size:11pt;color:var(--fg)}
-.proj-role{font-size:9pt;color:var(--dim)}
-.proj-meta{font-size:9pt;color:var(--dim);margin-bottom:4px;font-style:italic}
-.proj-body ul{
-  list-style:none;
-  padding:0;
-}
-.proj-body li{
-  font-size:9.5pt;
-  color:var(--sub);
+/* ---------- projects ---------- */
+.projects{display:grid;gap:14px}
+.proj{
+  display:block;
+  padding:22px 24px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--bg);
+  transition:.2s;
   position:relative;
-  padding-left:14px;
-  margin-bottom:2px;
 }
-.proj-body li::before{
-  content:"▸";
+.proj:hover{border-color:var(--fg);transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.04)}
+@media (prefers-color-scheme: dark){
+  .proj:hover{box-shadow:0 8px 24px rgba(0,0,0,.4)}
+}
+.proj-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.proj-title{font-size:18px;font-weight:700;color:var(--fg)}
+.proj-tag{
+  font-size:11px;
   color:var(--acc);
-  position:absolute;
-  left:0;
-  font-size:9pt;
+  background:var(--acc-soft);
+  padding:2px 8px;
+  border-radius:3px;
+  font-weight:600;
+  letter-spacing:.02em;
 }
-.proj-stack{
+.proj-tag.dim{color:var(--dim);background:var(--line-soft)}
+.proj-desc{
+  font-size:14.5px;
+  color:var(--sub);
+  margin-bottom:12px;
+  line-height:1.7;
+}
+.proj-meta{
   display:flex;
+  align-items:center;
   flex-wrap:wrap;
-  gap:4px;
-  margin-top:6px;
-}
-.proj-stack span{
-  font-size:8pt;
-  color:var(--dim);
-  border:1px solid var(--line-soft);
-  padding:1px 6px;
-  border-radius:2px;
-}
-
-/* ---------- job ---------- */
-.job{margin-bottom:10px}
-.job-h{
-  display:flex;
-  align-items:baseline;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-bottom:3px;
-}
-.job-c{font-weight:700;font-size:10.5pt;color:var(--fg)}
-.job-r{font-size:9pt;color:var(--dim)}
-.job-d{font-size:9pt;color:var(--dim);margin-left:auto}
-.job-body{font-size:9.5pt;color:var(--sub)}
-.job-body p + p{margin-top:2px}
-
-/* ---------- education ---------- */
-.edu{
-  display:flex;
-  align-items:baseline;
   gap:10px;
-  flex-wrap:wrap;
-  font-size:10pt;
+  font-size:12px;
+  color:var(--dim);
+  font-family:var(--mono);
 }
-.edu .s{font-weight:700;color:var(--fg)}
-.edu .d{color:var(--sub)}
-.edu .y{color:var(--dim);margin-left:auto;font-size:9pt}
+.proj-meta .sep{opacity:.4}
+.proj-meta a{color:var(--dim);border-bottom:1px dotted var(--line)}
+.proj-meta a:hover{color:var(--fg);border-color:var(--fg)}
 
-a{color:inherit;text-decoration:none}
+/* ---------- skills ---------- */
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px 28px}
+.skill h4{
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--dim);
+  margin-bottom:6px;
+}
+.skill p{font-size:14px;color:var(--sub);line-height:1.65}
+.skill code{
+  font-family:var(--mono);
+  font-size:12px;
+  background:var(--line-soft);
+  padding:1px 5px;
+  border-radius:3px;
+  color:var(--code);
+}
+
+/* ---------- contact ---------- */
+.contact-block{
+  padding:28px;
+  background:var(--line-soft);
+  border-radius:8px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:24px;
+  align-items:center;
+  justify-content:space-between;
+}
+.contact-block p{color:var(--sub);font-size:15px;max-width:380px}
+.contact-block p b{color:var(--fg);font-weight:700}
+.contact-links{display:flex;flex-direction:column;gap:6px;font-size:13px;font-family:var(--mono)}
+.contact-links a{color:var(--sub);border-bottom:1px dotted var(--line)}
+.contact-links a:hover{color:var(--fg);border-color:var(--fg)}
 
 /* ---------- footer ---------- */
 .footer{
-  margin-top:36px;
-  padding-top:14px;
+  margin-top:24px;
+  padding:32px 0 24px;
   border-top:1px solid var(--line-soft);
-  font-size:8.5pt;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:12px;
+  font-size:12px;
   color:var(--dim);
-  text-align:center;
+  font-family:var(--mono);
 }
 
 @media (max-width: 600px){
-  body{padding:24px 18px 40px}
-  .skills{grid-template-columns:1fr}
-  .name{font-size:24pt}
-}
-
-@media print{
-  body{font-size:9.5pt;padding:18px}
-  .footer{display:none}
+  .wrap{padding:0 20px}
+  .nav{margin-bottom:40px}
+  .hero{padding:12px 0 48px;margin-bottom:40px}
+  .hero-name{font-size:38px}
+  .hero-tag{font-size:17px}
+  .hero-desc{font-size:15px}
+  .sec{margin-bottom:48px}
+  .proj{padding:18px 20px}
+  .proj-title{font-size:16px}
+  .skills{grid-template-columns:1fr 1fr;gap:18px 16px}
+  .contact-block{padding:20px;flex-direction:column;align-items:flex-start;gap:16px}
+  .footer{flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header class="header">
-    <h1 class="name">周银钢</h1>
-    <div class="tagline">AI 应用工程师 | AI Agent Engineer</div>
-    <div class="contact">
-      <span>深圳</span>
-      <span class="sep">·</span>
-      <span><a href="mailto:zygzb521@gmail.com">zygzb521@gmail.com</a></span>
-      <span class="sep">·</span>
-      <span><a href="https://github.com/zygzb521-art" rel="noopener">github.com/zygzb521-art</a></span>
+  <nav class="nav">
+    <div class="brand">zhouyingang<b>.</b></div>
+    <div class="nav-links">
+      <a href="#projects">项目</a>
+      <a href="#skills">技能</a>
+      <a href="#contact">联系</a>
+      <a href="https://github.com/zygzb521-art" rel="noopener">GitHub ↗</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1 class="hero-name">周银钢<span class="accent">.</span></h1>
+    <p class="hero-tag">AI 应用工程师 · AI Agent Engineer</p>
+    <p class="hero-desc">
+      独立交付可运行的 AI 应用系统。从需求定义、架构设计到上线验收，把 AI Agent 工作流与多平台数据采集变成生产系统，而不是 demo。
+    </p>
+    <div class="hero-cta">
+      <a class="btn primary" href="#projects"><span class="ico">▾</span>看项目</a>
+      <a class="btn" href="mailto:zygzb521@gmail.com"><span class="ico">✉</span>邮箱</a>
+      <a class="btn" href="https://github.com/zygzb521-art" rel="noopener"><span class="ico">⌘</span>GitHub</a>
     </div>
   </header>
 
-  <section class="summary">
-    <p>具备企业 AI 应用落地经验，使用 Claude Code、Codex、Hermes Agent 等 AI 编程及 Agent 工具，能独立完成 AI Agent 工作流设计、自动化流程及企业级应用系统。</p>
-    <p>拥有 10 年制造业产品与业务实践经验，熟悉企业流程、供应链、客户服务及数字化需求，能从业务场景出发设计 AI 解决方案。</p>
-    <p>具备多 Agent 协作、AI 自动化流水线、AI 辅助开发经验，通过规则文件、任务拆分、人工审核机制提升 AI 输出稳定性与可控性。</p>
-    <p>独立完成企业官网、客服质检系统、内容生产 Agent 等 AI 应用项目，负责需求分析、架构设计、技术选型、开发部署及交付验收。</p>
+  <section class="sec" id="projects">
+    <div class="sec-h">
+      <div class="sec-title">精选项目</div>
+      <div class="sec-meta">04 / 2024—present</div>
+    </div>
+
+    <div class="projects">
+
+      <a class="proj" href="https://github.com/zygzb521-art/chat-quality-inspection" rel="noopener">
+        <div class="proj-h">
+          <span class="proj-title">销售聊天智能质检系统</span>
+          <span class="proj-tag">商业项目</span>
+        </div>
+        <p class="proj-desc">面向淘宝/天猫、京东、1688、拼多多、云客 CRM 五个平台的客服聊天自动质检系统。32 条内置规则覆盖执行规范、销售技巧、服务态度三个维度，支持多租户隔离、看板统计、人工复核、日报推送、培训素材管理。</p>
+        <div class="proj-meta">
+          <span>Django 5.2</span><span class="sep">·</span>
+          <span>Vue 3 + Element Plus</span><span class="sep">·</span>
+          <span>Celery + Redis + PostgreSQL</span><span class="sep">·</span>
+          <span>pytest</span><span class="sep">·</span>
+          <span>Docker</span><span class="sep">·</span>
+          <span>21 tests · CI green</span>
+        </div>
+      </a>
+
+      <a class="proj" href="https://zygzb521-art.github.io/book-video-agent/" rel="noopener">
+        <div class="proj-h">
+          <span class="proj-title">图书影创 Agent</span>
+          <span class="proj-tag">Hermes Agent</span>
+        </div>
+        <p class="proj-desc">面向图书带货场景的多 Agent 协作系统。从参考文案和一张商品主图出发，自动完成事实校验、文案二创、视觉规划、配音字幕、动效合成与成片质检；关键节点设人工审核，避免自动化失控。</p>
+        <div class="proj-meta">
+          <span>Multi-Agent</span><span class="sep">·</span>
+          <span>Hermes Agent</span><span class="sep">·</span>
+          <span>Edge TTS</span><span class="sep">·</span>
+          <span>FFmpeg</span><span class="sep">·</span>
+          <span>演示站 ↗</span>
+        </div>
+      </a>
+
+      <a class="proj" href="https://github.com/zygzb521-art" rel="noopener">
+        <div class="proj-h">
+          <span class="proj-title">YOWILL 企业品牌官网</span>
+          <span class="proj-tag">持续维护</span>
+        </div>
+        <p class="proj-desc">用 AI 辅助开发流程搭建的中英文品牌官网。Astro 静态架构 + Frontmatter Schema，让非技术人员也能稳定产出符合 SEO/GEO 规范的页面。覆盖产品展示、技术资料、应用场景、企业博客、询盘系统。</p>
+        <div class="proj-meta">
+          <span>Astro</span><span class="sep">·</span>
+          <span>TypeScript</span><span class="sep">·</span>
+          <span>SEO / GEO</span>
+        </div>
+      </a>
+
+      <a class="proj" href="https://github.com/zygzb521-art" rel="noopener">
+        <div class="proj-h">
+          <span class="proj-title">多 Agent 内容生产与代码交付体系</span>
+          <span class="proj-tag dim">内部实践</span>
+        </div>
+        <p class="proj-desc">内容 Agent 与代码 Agent 分离的两套工作流。靠 Git 分支协议 + 人工审核节点做任务交接，靠规则文件约束 Agent 行为（命名规范、参数表达、内容标准）。完整流水线：热点采集 → 自动选题 → 内容生成 → 审核 → 发布。</p>
+        <div class="proj-meta">
+          <span>Claude Code</span><span class="sep">·</span>
+          <span>Hermes Agent</span><span class="sep">·</span>
+          <span>Git Workflow</span><span class="sep">·</span>
+          <span>Cron</span>
+        </div>
+      </a>
+
+    </div>
   </section>
 
-  <section class="sec">
-    <div class="sec-h">技能矩阵</div>
+  <section class="sec" id="skills">
+    <div class="sec-h">
+      <div class="sec-title">能做什么</div>
+      <div class="sec-meta">delivered · not claimed</div>
+    </div>
+
     <div class="skills">
-      <div class="skill"><span class="skill-name">AI 应用开发</span><span class="skill-detail">Claude Code · Codex · Hermes Agent · AI Agent 工作流设计 · Multi-Agent 协作</span></div>
-      <div class="skill"><span class="skill-name"></span><span class="skill-detail">Prompt Engineering · AI 自动化流程设计 · AI API 集成 · AI 内容生成流程</span></div>
-      <div class="skill"><span class="skill-name">后端开发</span><span class="skill-detail">Python · Django · DRF · Celery · Redis · PostgreSQL · JWT</span></div>
-      <div class="skill"><span class="skill-name">前端与网站</span><span class="skill-detail">TypeScript · Astro · Vite · Tailwind CSS · SEO/GEO 网站架构</span></div>
-      <div class="skill"><span class="skill-name">数据与自动化</span><span class="skill-detail">Playwright · FFmpeg · Edge TTS · Cron 定时任务 · n8n 自动化流程</span></div>
-      <div class="skill"><span class="skill-name">部署与工程</span><span class="skill-detail">Docker · Nginx · Gunicorn · Git · Linux 部署</span></div>
-      <div class="skill"><span class="skill-name">行业经验</span><span class="skill-detail">制造业业务流程 · 企业数字化 · 跨境电商 · 客服质量管理</span></div>
-      <div class="skills-foot">以上为已交付系统实际涉及的技术栈，由 AI 协作实现；本人负责需求定义、方案选型、分工设计与交付验收。</div>
+      <div class="skill">
+        <h4>AI 应用开发</h4>
+        <p>把 Claude Code、Codex、Hermes Agent 等工具接入实际业务，做 Agent 工作流设计、自动化流水线、AI API 集成。</p>
+      </div>
+      <div class="skill">
+        <h4>后端系统</h4>
+        <p><code>Python</code> · <code>Django</code> · <code>DRF</code> · <code>Celery</code> · <code>Redis</code> · <code>PostgreSQL</code>。能搭多租户系统、写覆盖核心路径的测试。</p>
+      </div>
+      <div class="skill">
+        <h4>前端 / 网站</h4>
+        <p><code>TypeScript</code> · <code>Vue 3</code> · <code>Astro</code> · <code>Vite</code> · <code>Tailwind</code>。SEO/GEO 友好的站点结构。</p>
+      </div>
+      <div class="skill">
+        <h4>数据 / 自动化</h4>
+        <p>多平台数据采集、Playwright、Edge TTS、FFmpeg、Cron 定时任务、n8n 流程。</p>
+      </div>
+      <div class="skill">
+        <h4>部署 / 工程</h4>
+        <p><code>Docker</code> · <code>Nginx</code> · <code>Gunicorn</code> · <code>GitHub Actions</code> · Linux 部署。从本地到 CI 一气贯通。</p>
+      </div>
+      <div class="skill">
+        <h4>行业经验</h4>
+        <p>10 年制造业产品与业务实践。懂工厂流程、供应链、客户服务、跨境业务场景，能从业务问题出发设计 AI 方案。</p>
+      </div>
     </div>
   </section>
 
-  <section class="sec">
-    <div class="sec-h">项目经历</div>
+  <section class="sec" id="contact">
+    <div class="sec-h">
+      <div class="sec-title">联系 / 关于</div>
+      <div class="sec-meta">base 深圳 · open to interesting work</div>
+    </div>
 
-    <div class="proj">
-      <div class="proj-h">
-        <span class="proj-title">销售聊天智能质检系统</span>
-        <span class="proj-role">AI 应用开发 / 独立交付</span>
-      </div>
-      <div class="proj-meta">近期 · 商业项目 · <a href="https://github.com/zygzb521-art/chat-quality-inspection" rel="noopener">github.com/zygzb521-art/chat-quality-inspection</a></div>
-      <div class="proj-body">
-        <ul>
-          <li>针对企业客服质量管理需求，设计并开发客服聊天记录自动分析与评分系统。</li>
-          <li>对接淘宝、京东、拼多多、1688、云客 CRM 五个平台，实现客服聊天数据自动采集。</li>
-          <li>内置 32 条质检规则，覆盖执行规范、销售技巧、服务态度三个维度。</li>
-          <li>支持多租户隔离、看板统计、人工复核、日报推送、培训素材管理。</li>
-          <li>独立完成需求分析、数据库设计、后端开发、测试覆盖（21 个 pytest）、部署上线。</li>
-          <li>已发布为开源项目，含完整文档与 CI 流水线。</li>
-        </ul>
-      </div>
-      <div class="proj-stack">
-        <span>Django 5.2</span><span>DRF</span><span>JWT</span><span>Celery</span><span>Redis</span><span>PostgreSQL</span><span>pytest</span>
+    <div class="contact-block">
+      <p>
+        邮箱 <b>最稳</b>。在 AI 应用 / Agent / 自动化方向有具体合作意向的，可以直接说明场景和痛点。
+      </p>
+      <div class="contact-links">
+        <a href="mailto:zygzb521@gmail.com">zygzb521@gmail.com</a>
+        <a href="https://github.com/zygzb521-art" rel="noopener">github.com/zygzb521-art</a>
+        <span style="color:var(--dim)">深圳</span>
       </div>
     </div>
 
-    <div class="proj">
-      <div class="proj-h">
-        <span class="proj-title">Multi-Agent 内容生产与代码交付体系</span>
-        <span class="proj-role">AI Agent 架构设计</span>
-      </div>
-      <div class="proj-meta">近期</div>
-      <div class="proj-body">
-        <ul>
-          <li>设计基于多 Agent 协作的 AI 自动化生产体系，实现内容生产与软件开发任务分离。</li>
-          <li>设计内容 Agent 与代码 Agent 两套工作流：内容 Agent 负责 SEO 内容生成、选题规划、资料整理；代码 Agent 负责代码开发、测试、部署。</li>
-          <li>通过 Git 分支协议和人工审核节点，实现 Agent 间任务交接。</li>
-          <li>建立规则文件约束 Agent 行为，包括产品命名规范、技术参数表达、内容审核标准。</li>
-          <li>搭建自动化流程：热点采集 → 自动选题 → 内容生成 → 人工审核 → 发布。</li>
-        </ul>
-      </div>
-      <div class="proj-stack">
-        <span>Claude Code</span><span>Hermes Agent</span><span>Codex</span><span>Git Workflow</span><span>Cron</span><span>MiniMax T2I</span>
-      </div>
-    </div>
-
-    <div class="proj">
-      <div class="proj-h">
-        <span class="proj-title">YOWILL 企业品牌官网与 SEO/GEO 系统</span>
-        <span class="proj-role">AI 产品数字化建设</span>
-      </div>
-      <div class="proj-meta">持续维护</div>
-      <div class="proj-body">
-        <ul>
-          <li>负责企业品牌官网建设，将 AI 辅助开发流程应用于企业数字化建设。</li>
-          <li>独立搭建中英文品牌官网，包括产品展示、技术资料、应用场景、企业博客、客户询盘系统。</li>
-          <li>使用 Astro 静态架构提升网站性能和 SEO 表现。</li>
-          <li>设计 Frontmatter Schema 规范内容结构，降低内容维护成本。</li>
-          <li>结合 SEO/GEO 方法优化 AI 搜索时代的网站内容结构。</li>
-        </ul>
-      </div>
-      <div class="proj-stack">
-        <span>Astro</span><span>TypeScript</span><span>Frontmatter Schema</span><span>SEO</span><span>GEO</span>
-      </div>
-    </div>
-
-    <div class="proj">
-      <div class="proj-h">
-        <span class="proj-title">AI 图书口播短视频自动生成 Agent</span>
-        <span class="proj-role">AI 自动化应用开发</span>
-      </div>
-      <div class="proj-meta">已完成</div>
-      <div class="proj-body">
-        <ul>
-          <li>独立开发 AI 视频生产工具，实现从文本输入到短视频成片自动生成。</li>
-          <li>输入书名 → 自动生成：选题分析 → 口播脚本 → AI 图片生成 → 语音合成 → 视频剪辑 → 标题与标签生成。</li>
-          <li>Python 编排自动化流程。</li>
-          <li>FFmpeg 实现视频合成、Ken Burns 动态效果。</li>
-          <li>根据语音时长自动调整画面切换。</li>
-        </ul>
-      </div>
-      <div class="proj-stack">
-        <span>Python</span><span>FFmpeg</span><span>Edge TTS</span><span>MiniMax T2I</span>
-      </div>
-    </div>
-
-  </section>
-
-  <section class="sec">
-    <div class="sec-h">工作经历</div>
-
-    <div class="job">
-      <div class="job-h">
-        <span class="job-c">AI 应用开发与项目交付</span>
-        <span class="job-r">独立工程师</span>
-        <span class="job-d">2024 — 至今</span>
-      </div>
-      <div class="job-body">
-        <p>专注企业 AI 应用落地与自动化系统开发。使用 AI 编程工具辅助完成应用开发，提高开发效率。负责 AI Agent 工作流设计、系统架构、技术选型和项目交付。</p>
-        <p>实践方向包括：企业自动化流程、AI 内容生产、AI 客服分析、AI 辅助软件开发。</p>
-      </div>
-    </div>
-
-    <div class="job">
-      <div class="job-h">
-        <span class="job-c">深圳市有为科技设备有限公司</span>
-        <span class="job-r">技术与产品负责人</span>
-        <span class="job-d">2015 — 2024</span>
-      </div>
-      <div class="job-body">
-        <p>负责工业设备产品研发、业务流程优化及企业数字化建设。深入参与 UV 打印设备产品、供应链及客户业务流程。结合 AI 工具建设企业官网、内容生产体系和自动化流程。</p>
-        <p>将制造业业务经验与 AI 技术结合，探索企业 AI 应用场景。</p>
-      </div>
-    </div>
-
-    <div class="job">
-      <div class="job-h">
-        <span class="job-c">深圳市天阳工程设计有限公司</span>
-        <span class="job-r">建筑结构工程师</span>
-        <span class="job-d">2010 — 2015</span>
-      </div>
-      <div class="job-body">
-        <p>负责建筑结构设计、计算与图纸审核，参与工业与民用建筑项目。</p>
-      </div>
-    </div>
-
-  </section>
-
-  <section class="sec">
-    <div class="sec-h">教育</div>
-    <div class="edu">
-      <span class="s">南昌航空大学</span>
-      <span class="d">本科 · 土木工程</span>
-      <span class="y">2010 届</span>
-    </div>
+    <p style="margin-top:24px;font-size:13px;color:var(--dim);line-height:1.7;max-width:680px">
+      本人是独立工程师，目前不公开手机号与其他社交账号。简历与项目源码以 GitHub 为准；商业合作欢迎邮件沟通。
+    </p>
   </section>
 
   <footer class="footer">
-    最后更新：2026-09 · 本页由 <a href="https://github.com/zygzb521-art/zygzb521-art.github.io" rel="noopener">zygzb521-art/zygzb521-art.github.io</a> 托管
+    <span>© 2026 zhouyingang · zygzb521-art</span>
+    <span>last updated 2026-09 · source on <a href="https://github.com/zygzb521-art/zygzb521-art.github.io" style="border-bottom:1px dotted var(--line)">github</a></span>
   </footer>
 
 </div>
