@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>周银钢 · AI 应用工程师 | AI Agent Engineer</title>
+<meta name="description" content="周银钢 - AI 应用工程师 / AI Agent Engineer。独立交付可运行的 AI 应用系统。深圳。">
+<meta name="author" content="周银钢">
+<meta property="og:title" content="周银钢 · AI 应用工程师">
+<meta property="og:description" content="独立交付可运行的 AI 应用系统。">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#b8292a">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+<style>
+:root{
+  --fg:#111;
+  --sub:#333;
+  --dim:#666;
+  --line:#cfd6dd;
+  --line-soft:#e6eaee;
+  --bg:#fff;
+  --acc:#b8292a;
+  --rule:#caa15a;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--sans);
+  font-size:11pt;
+  line-height:1.55;
+  padding:42px 28px 60px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:780px;margin:0 auto}
+
+/* ---------- header ---------- */
+.header{margin-bottom:0}
+.name{
+  font-size:30pt;
+  font-weight:700;
+  letter-spacing:.01em;
+  line-height:1.1;
+  margin-bottom:6px;
+}
+.tagline{
+  font-size:11pt;
+  color:var(--sub);
+  margin-bottom:18px;
+  letter-spacing:.02em;
+}
+.contact{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0 14px;
+  font-size:9.5pt;
+  color:var(--sub);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:8px 0;
+  margin-bottom:24px;
+}
+.contact a{color:var(--sub);text-decoration:none}
+.contact a:hover{color:var(--acc)}
+.contact .sep{color:var(--line)}
+
+/* ---------- summary ---------- */
+.summary{margin:0 0 26px}
+.summary p{color:var(--sub);font-size:10.5pt}
+.summary p + p{margin-top:5px}
+
+/* ---------- section ---------- */
+.sec{margin-top:24px}
+.sec-h{
+  font-size:11pt;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--fg);
+  border-bottom:1.5px solid var(--acc);
+  padding-bottom:3px;
+  margin-bottom:12px;
+}
+
+/* ---------- skill matrix ---------- */
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:6px 28px}
+.skill{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:10px;
+  padding:2px 0;
+  border-bottom:1px dotted var(--line-soft);
+}
+.skill-name{font-weight:600;color:var(--fg);font-size:10.5pt}
+.skill-detail{color:var(--dim);font-size:9.5pt}
+.skills-foot{grid-column:1/-1;margin-top:6px;color:var(--dim);font-size:9pt}
+
+/* ---------- project card ---------- */
+.proj{margin-bottom:12px}
+.proj-h{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:2px;
+}
+.proj-title{font-weight:700;font-size:11pt;color:var(--fg)}
+.proj-role{font-size:9pt;color:var(--dim)}
+.proj-meta{font-size:9pt;color:var(--dim);margin-bottom:4px;font-style:italic}
+.proj-body ul{
+  list-style:none;
+  padding:0;
+}
+.proj-body li{
+  font-size:9.5pt;
+  color:var(--sub);
+  position:relative;
+  padding-left:14px;
+  margin-bottom:2px;
+}
+.proj-body li::before{
+  content:"▸";
+  color:var(--acc);
+  position:absolute;
+  left:0;
+  font-size:9pt;
+}
+.proj-stack{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px;
+  margin-top:6px;
+}
+.proj-stack span{
+  font-size:8pt;
+  color:var(--dim);
+  border:1px solid var(--line-soft);
+  padding:1px 6px;
+  border-radius:2px;
+}
+
+/* ---------- job ---------- */
+.job{margin-bottom:10px}
+.job-h{
+  display:flex;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:3px;
+}
+.job-c{font-weight:700;font-size:10.5pt;color:var(--fg)}
+.job-r{font-size:9pt;color:var(--dim)}
+.job-d{font-size:9pt;color:var(--dim);margin-left:auto}
+.job-body{font-size:9.5pt;color:var(--sub)}
+.job-body p + p{margin-top:2px}
+
+/* ---------- education ---------- */
+.edu{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  flex-wrap:wrap;
+  font-size:10pt;
+}
+.edu .s{font-weight:700;color:var(--fg)}
+.edu .d{color:var(--sub)}
+.edu .y{color:var(--dim);margin-left:auto;font-size:9pt}
+
+a{color:inherit;text-decoration:none}
+
+/* ---------- footer ---------- */
+.footer{
+  margin-top:36px;
+  padding-top:14px;
+  border-top:1px solid var(--line-soft);
+  font-size:8.5pt;
+  color:var(--dim);
+  text-align:center;
+}
+
+@media (max-width: 600px){
+  body{padding:24px 18px 40px}
+  .skills{grid-template-columns:1fr}
+  .name{font-size:24pt}
+}
+
+@media print{
+  body{font-size:9.5pt;padding:18px}
+  .footer{display:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="header">
+    <h1 class="name">周银钢</h1>
+    <div class="tagline">AI 应用工程师 | AI Agent Engineer</div>
+    <div class="contact">
+      <span>深圳</span>
+      <span class="sep">·</span>
+      <span><a href="mailto:zygzb521@gmail.com">zygzb521@gmail.com</a></span>
+      <span class="sep">·</span>
+      <span><a href="https://github.com/zygzb521-art" rel="noopener">github.com/zygzb521-art</a></span>
+    </div>
+  </header>
+
+  <section class="summary">
+    <p>具备企业 AI 应用落地经验，使用 Claude Code、Codex、Hermes Agent 等 AI 编程及 Agent 工具，能独立完成 AI Agent 工作流设计、自动化流程及企业级应用系统。</p>
+    <p>拥有 10 年制造业产品与业务实践经验，熟悉企业流程、供应链、客户服务及数字化需求，能从业务场景出发设计 AI 解决方案。</p>
+    <p>具备多 Agent 协作、AI 自动化流水线、AI 辅助开发经验，通过规则文件、任务拆分、人工审核机制提升 AI 输出稳定性与可控性。</p>
+    <p>独立完成企业官网、客服质检系统、内容生产 Agent 等 AI 应用项目，负责需求分析、架构设计、技术选型、开发部署及交付验收。</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h">技能矩阵</div>
+    <div class="skills">
+      <div class="skill"><span class="skill-name">AI 应用开发</span><span class="skill-detail">Claude Code · Codex · Hermes Agent · AI Agent 工作流设计 · Multi-Agent 协作</span></div>
+      <div class="skill"><span class="skill-name"></span><span class="skill-detail">Prompt Engineering · AI 自动化流程设计 · AI API 集成 · AI 内容生成流程</span></div>
+      <div class="skill"><span class="skill-name">后端开发</span><span class="skill-detail">Python · Django · DRF · Celery · Redis · PostgreSQL · JWT</span></div>
+      <div class="skill"><span class="skill-name">前端与网站</span><span class="skill-detail">TypeScript · Astro · Vite · Tailwind CSS · SEO/GEO 网站架构</span></div>
+      <div class="skill"><span class="skill-name">数据与自动化</span><span class="skill-detail">Playwright · FFmpeg · Edge TTS · Cron 定时任务 · n8n 自动化流程</span></div>
+      <div class="skill"><span class="skill-name">部署与工程</span><span class="skill-detail">Docker · Nginx · Gunicorn · Git · Linux 部署</span></div>
+      <div class="skill"><span class="skill-name">行业经验</span><span class="skill-detail">制造业业务流程 · 企业数字化 · 跨境电商 · 客服质量管理</span></div>
+      <div class="skills-foot">以上为已交付系统实际涉及的技术栈，由 AI 协作实现；本人负责需求定义、方案选型、分工设计与交付验收。</div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h">项目经历</div>
+
+    <div class="proj">
+      <div class="proj-h">
+        <span class="proj-title">销售聊天智能质检系统</span>
+        <span class="proj-role">AI 应用开发 / 独立交付</span>
+      </div>
+      <div class="proj-meta">近期 · 商业项目 · <a href="https://github.com/zygzb521-art/chat-quality-inspection" rel="noopener">github.com/zygzb521-art/chat-quality-inspection</a></div>
+      <div class="proj-body">
+        <ul>
+          <li>针对企业客服质量管理需求，设计并开发客服聊天记录自动分析与评分系统。</li>
+          <li>对接淘宝、京东、拼多多、1688、云客 CRM 五个平台，实现客服聊天数据自动采集。</li>
+          <li>内置 32 条质检规则，覆盖执行规范、销售技巧、服务态度三个维度。</li>
+          <li>支持多租户隔离、看板统计、人工复核、日报推送、培训素材管理。</li>
+          <li>独立完成需求分析、数据库设计、后端开发、测试覆盖（21 个 pytest）、部署上线。</li>
+          <li>已发布为开源项目，含完整文档与 CI 流水线。</li>
+        </ul>
+      </div>
+      <div class="proj-stack">
+        <span>Django 5.2</span><span>DRF</span><span>JWT</span><span>Celery</span><span>Redis</span><span>PostgreSQL</span><span>pytest</span>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-h">
+        <span class="proj-title">Multi-Agent 内容生产与代码交付体系</span>
+        <span class="proj-role">AI Agent 架构设计</span>
+      </div>
+      <div class="proj-meta">近期</div>
+      <div class="proj-body">
+        <ul>
+          <li>设计基于多 Agent 协作的 AI 自动化生产体系，实现内容生产与软件开发任务分离。</li>
+          <li>设计内容 Agent 与代码 Agent 两套工作流：内容 Agent 负责 SEO 内容生成、选题规划、资料整理；代码 Agent 负责代码开发、测试、部署。</li>
+          <li>通过 Git 分支协议和人工审核节点，实现 Agent 间任务交接。</li>
+          <li>建立规则文件约束 Agent 行为，包括产品命名规范、技术参数表达、内容审核标准。</li>
+          <li>搭建自动化流程：热点采集 → 自动选题 → 内容生成 → 人工审核 → 发布。</li>
+        </ul>
+      </div>
+      <div class="proj-stack">
+        <span>Claude Code</span><span>Hermes Agent</span><span>Codex</span><span>Git Workflow</span><span>Cron</span><span>MiniMax T2I</span>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-h">
+        <span class="proj-title">YOWILL 企业品牌官网与 SEO/GEO 系统</span>
+        <span class="proj-role">AI 产品数字化建设</span>
+      </div>
+      <div class="proj-meta">持续维护</div>
+      <div class="proj-body">
+        <ul>
+          <li>负责企业品牌官网建设，将 AI 辅助开发流程应用于企业数字化建设。</li>
+          <li>独立搭建中英文品牌官网，包括产品展示、技术资料、应用场景、企业博客、客户询盘系统。</li>
+          <li>使用 Astro 静态架构提升网站性能和 SEO 表现。</li>
+          <li>设计 Frontmatter Schema 规范内容结构，降低内容维护成本。</li>
+          <li>结合 SEO/GEO 方法优化 AI 搜索时代的网站内容结构。</li>
+        </ul>
+      </div>
+      <div class="proj-stack">
+        <span>Astro</span><span>TypeScript</span><span>Frontmatter Schema</span><span>SEO</span><span>GEO</span>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-h">
+        <span class="proj-title">AI 图书口播短视频自动生成 Agent</span>
+        <span class="proj-role">AI 自动化应用开发</span>
+      </div>
+      <div class="proj-meta">已完成</div>
+      <div class="proj-body">
+        <ul>
+          <li>独立开发 AI 视频生产工具，实现从文本输入到短视频成片自动生成。</li>
+          <li>输入书名 → 自动生成：选题分析 → 口播脚本 → AI 图片生成 → 语音合成 → 视频剪辑 → 标题与标签生成。</li>
+          <li>Python 编排自动化流程。</li>
+          <li>FFmpeg 实现视频合成、Ken Burns 动态效果。</li>
+          <li>根据语音时长自动调整画面切换。</li>
+        </ul>
+      </div>
+      <div class="proj-stack">
+        <span>Python</span><span>FFmpeg</span><span>Edge TTS</span><span>MiniMax T2I</span>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="sec">
+    <div class="sec-h">工作经历</div>
+
+    <div class="job">
+      <div class="job-h">
+        <span class="job-c">AI 应用开发与项目交付</span>
+        <span class="job-r">独立工程师</span>
+        <span class="job-d">2024 — 至今</span>
+      </div>
+      <div class="job-body">
+        <p>专注企业 AI 应用落地与自动化系统开发。使用 AI 编程工具辅助完成应用开发，提高开发效率。负责 AI Agent 工作流设计、系统架构、技术选型和项目交付。</p>
+        <p>实践方向包括：企业自动化流程、AI 内容生产、AI 客服分析、AI 辅助软件开发。</p>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-h">
+        <span class="job-c">深圳市有为科技设备有限公司</span>
+        <span class="job-r">技术与产品负责人</span>
+        <span class="job-d">2015 — 2024</span>
+      </div>
+      <div class="job-body">
+        <p>负责工业设备产品研发、业务流程优化及企业数字化建设。深入参与 UV 打印设备产品、供应链及客户业务流程。结合 AI 工具建设企业官网、内容生产体系和自动化流程。</p>
+        <p>将制造业业务经验与 AI 技术结合，探索企业 AI 应用场景。</p>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-h">
+        <span class="job-c">深圳市天阳工程设计有限公司</span>
+        <span class="job-r">建筑结构工程师</span>
+        <span class="job-d">2010 — 2015</span>
+      </div>
+      <div class="job-body">
+        <p>负责建筑结构设计、计算与图纸审核，参与工业与民用建筑项目。</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="sec">
+    <div class="sec-h">教育</div>
+    <div class="edu">
+      <span class="s">南昌航空大学</span>
+      <span class="d">本科 · 土木工程</span>
+      <span class="y">2010 届</span>
+    </div>
+  </section>
+
+  <footer class="footer">
+    最后更新：2026-09 · 本页由 <a href="https://github.com/zygzb521-art/zygzb521-art.github.io" rel="noopener">zygzb521-art/zygzb521-art.github.io</a> 托管
+  </footer>
+
+</div>
+</body>
+</html>
